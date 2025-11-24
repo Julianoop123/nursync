@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nursync · Inicio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue-700:#0a5fa8;
+      --blue-800:#094a80;
+      --accent:#0c75d3;
+      --bg:#eef7ff;
+      --card:#ffffff;
+      --text:#033661;
+    }
+
+    *{box-sizing:border-box;}
+    body{
+      font-family:Inter,system-ui,Arial;
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+    }
+
+    header{
+      background:linear-gradient(135deg,var(--blue-700),var(--blue-800));
+      color:white;
+      padding:22px 18px;
+      position:sticky;
+      top:0;
+      z-index:50;
+      box-shadow:0 6px 20px rgba(10,95,168,0.18);
+      border-bottom:2px solid rgba(255,255,255,0.2);
+    }
+
+    .container{max-width:1100px;margin:0 auto;padding:28px;}
+
+    nav{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+    nav a{
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+      padding:8px 16px;
+      border-radius:8px;
+      transition:0.3s;
+      position:relative;
+    }
+    nav a::after{
+      content:'';
+      position:absolute;
+      bottom:0;
+      left:0;
+      width:0;
+      height:2px;
+      background:white;
+      transition:width 0.3s;
+    }
+    nav a:hover::after{
+      width:100%;
+    }
+    nav a:hover{
+      background:rgba(255,255,255,0.15);
+    }
+
+    .hero{
+      text-align:center;
+      padding:100px 18px 80px;
+      background:linear-gradient(135deg, rgba(10,95,168,0.1), rgba(12,117,211,0.1));
+      border-radius:20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      margin-bottom:40px;
+    }
+    .hero h1{
+      font-size:3rem;
+      margin-bottom:20px;
+      font-weight:700;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+    }
+    .hero p{
+      font-size:1.2rem;
+      max-width:700px;
+      margin:auto;
+      opacity:.9;
+      line-height:1.6;
+    }
+
+    .actions{
+      margin-top:30px;
+      display:flex;
+      gap:16px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .btn{
+      background:var(--card);
+      color:var(--blue-700);
+      padding:14px 24px;
+      border-radius:12px;
+      font-weight:700;
+      text-decoration:none;
+      box-shadow:0 8px 24px rgba(10,95,168,0.15);
+      transition: all 0.3s ease;
+    }
+    .btn:hover{
+      transform:translateY(-5px) scale(1.05);
+      box-shadow:0 12px 28px rgba(10,95,168,0.25);
+    }
+    .cta{
+      background:linear-gradient(90deg,var(--accent),var(--blue-700));
+      color:white;
+      box-shadow:0 6px 20px rgba(12,117,211,0.2);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:24px;
+      margin-top:48px;
+    }
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 12px 28px rgba(0,0,0,0.08);
+      transition:.4s;
+      position:relative;
+      overflow:hidden;
+    }
+    .card::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      background:linear-gradient(135deg,rgba(12,117,211,0.05),rgba(10,95,168,0.05));
+      z-index:0;
+      transition:all 0.4s;
+    }
+    .card:hover::before{
+      transform:scale(1.2);
+    }
+    .card h3{
+      margin-top:0;
+      font-size:1.5rem;
+      color:var(--blue-700);
+      position:relative;
+      z-index:1;
+    }
+    .card p{
+      position:relative;
+      z-index:1;
+      line-height:1.5;
+      margin-top:8px;
+      opacity:0.9;
+    }
+
+    footer{
+      background:var(--blue-700);
+      color:white;
+      padding:30px;
+      text-align:center;
+      margin-top:60px;
+      font-size:1rem;
+      box-shadow:0 -4px 20px rgba(0,0,0,0.1);
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      
+      <div style="display:flex;align-items:center;gap:14px">
+        <img src="https://i.ibb.co/1fshQ2k9/logo-jpeg.jpg"
+             alt="Logo"
+             style="height:65px;width:auto;border-radius:10px;">
+        <div>
+          <div style="font-weight:700;font-size:1.3rem;letter-spacing:0.5px">NURSYNC</div>
+          <div style="font-size:.9rem;opacity:.9">Salud Digital · Humanizada</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="citas.html">Agendar</a>
+        <a href="videollamada.html">Videollamada</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <h1>Atención de enfermería por videollamada</h1>
+      <p>Consulta, valoración y acompañamiento profesional sin salir de tu hogar — rápido, seguro y humano.</p>
+
+      <div class="actions">
+        <a class="btn cta" href="citas.html">Agendar cita</a>
+        <a class="btn" href="servicios.html">Ver servicios</a>
+      </div>
+    </section>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Valoración virtual</h3>
+        <p>Evaluación completa por videollamada con personal de enfermería profesional.</p>
+      </div>
+
+      <div class="card">
+        <h3>Seguimiento</h3>
+        <p>Revisión del estado del paciente y orientación continua para el autocuidado.</p>
+      </div>
+
+      <div class="card">
+        <h3>Programas especializados</h3>
+        <p>Atención para pie diabético, heridas crónicas y cuidados específicos.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2025 NURSYNC · Atención de enfermería por videollamada · contacto@nursync.com
+  </footer>
+
+</body>
+</html>
+
